@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 340px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #0077ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Social login buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.google {
+  background: #db4437;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.social-btn i {
+  margin-right: 8px;
+}
+
+/* Hide all forms by default */
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.divider {
+  margin: 15px 0;
+  color: #888;
+  font-size: 14px;
+  position: relative;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+}

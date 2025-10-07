@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Authentication</title>
+  <!-- Google Fonts + Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="jp.css">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Login Form -->
+    <form id="loginForm" class="active form">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+
+      <div class="divider">or</div>
+
+      <!-- Social login -->
+      <button type="button" class="social-btn google">
+        <i class="fab fa-google"></i> Continue with Google
+      </button>
+      <button type="button" class="social-btn facebook">
+        <i class="fab fa-facebook-f"></i> Continue with Facebook
+      </button>
+
+      <p><a href="#" onclick="showForm('forgotForm')">Forgot Password?</a></p>
+      <p>Don’t have an account? <a href="#" onclick="showForm('signupForm')">Sign Up</a></p>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="signupForm" class="form">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+      <button type="submit">Create Account</button>
+
+      <div class="divider">or</div>
+
+      <!-- Social sign up -->
+      <button type="button" class="social-btn google">
+        <i class="fab fa-google"></i> Sign up with Google
+      </button>
+      <button type="button" class="social-btn facebook">
+        <i class="fab fa-facebook-f"></i> Sign up with Facebook
+      </button>
+
+      <p>Already have an account? <a href="#" onclick="showForm('loginForm')">Login</a></p>
+    </form>
+
+    <!-- Forgot Password Form -->
+    <form id="forgotForm" class="form">
+      <h2>Forgot Password</h2>
+      <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+      <button type="submit">Reset Password</button>
+      <p><a href="#" onclick="showForm('loginForm')">Back to Login</a></p>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script src="jp.js"></script>
+</body>
+</html>
